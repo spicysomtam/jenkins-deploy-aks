@@ -1,6 +1,6 @@
 # Introduction
 
-Create an azure kubernetes cluster (`aks`) by running a Jenkins pipeline.
+Create an azure kubernetes cluster (`aks`) by running a Jenkins pipeline. Sometimes you just want to deploy something without having to figure out how to do it; on demand so to speak.
 
 Note that at the time of writing this, `aks` only had a single master; hopefully this will change in time to offer a fault tolerant setup.
 
