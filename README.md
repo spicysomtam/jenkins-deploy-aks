@@ -22,7 +22,9 @@ Add the sp as a Jenkins credential using Kind `Microsoft Azure Service Principle
 
 # Running the pipeline
 
-Just create a Pipeline in Jenkins and point it at a git repo where this code is hosted. 
+The `az` cli needs installing on the Jenkins server and in the PATH for Jenkins.
+
+Create a Pipeline in Jenkins and point it at a git repo where this code is hosted. 
 
 Specify `Jenkinsfile` to be used as the jenkinsfile.
 
@@ -119,4 +121,4 @@ aks-nodepool1-26648723-0   Ready     agent     27m       v1.9.11
 
 # Where next
 
-`aks` is a fairly simple to deploy. However there is much more to `aks'. Head over the Azure [docs](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough).
+`aks` is a fairly simple to deploy. However there is much more to `aks`. Head over the Azure [docs](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough).
