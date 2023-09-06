@@ -14,13 +14,13 @@ This pipeline does not create a service principle for the `aks` cluster; instead
 
 Pipeline uses a service principle (sp) with a secret. You can create this via the `az` command line or via the Azure portal.
 
-The `az` cli setup is described [here](https://www.terraform.io/docs/providers/azurerm/auth/service_principal_client_secret.html).
+The `az` cli setup is described [here](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-The Azure portal setup is described [here](https://docs.microsoft.com/en-gb/azure/active-directory/develop/howto-create-service-principal-portal).
+The Azure portal setup for the sp is described [here](https://docs.microsoft.com/en-gb/azure/active-directory/develop/howto-create-service-principal-portal).
 
 Role `Contributor` is sufficient to deploy `aks` (but its not sufficient if a sp is also to be created).
 
-Add the sp as a Jenkins credential using Kind `Microsoft Azure Service Principle`; this will require the `Azure Credentials` Jenkins plugin.
+Add the sp as a Jenkins credential using Kind `Azure Service Principle`; this will require the `Azure Credentials` Jenkins plugin. See this [link](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-3-create-a-new-application-secret) for details. I would suggest a client secret and make sure you put the client secret Value in as the password and not the client secret ID!
 
 # Running the pipeline
 
